@@ -17,8 +17,8 @@ blocks:
         - name: "Build and Push Docker image"
           commands:
             - checkout
-            - docker build -t llm:$SEMAPHORE_WORKFLOW_ID .
-            - docker tag llm:$SEMAPHORE_WORKFLOW_ID $DOCKER_USERNAME/llm:$SEMAPHORE_WORKFLOW_ID
-            - docker tag llm:$SEMAPHORE_WORKFLOW_ID $DOCKER_USERNAME/llm:latest
-            - docker push $DOCKER_USERNAME/llm:$SEMAPHORE_WORKFLOW_ID
-            - docker push $DOCKER_USERNAME/llm:latest
+            - docker build -t llmp:$SEMAPHORE_WORKFLOW_ID .
+            - docker tag llm:$SEMAPHORE_WORKFLOW_ID $DOCKER_USERNAME/llmp:$SEMAPHORE_WORKFLOW_ID
+            - docker tag llm:$SEMAPHORE_WORKFLOW_ID $DOCKER_USERNAME/llmp:latest
+            - docker push $DOCKER_USERNAME/llmp:$SEMAPHORE_WORKFLOW_ID
+            - docker push $DOCKER_USERNAME/llmp:latest
