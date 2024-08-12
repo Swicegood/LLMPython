@@ -18,7 +18,7 @@ blocks:
           commands:
             - checkout
             - docker build -t llmp:$SEMAPHORE_WORKFLOW_ID .
-            - docker tag llm:$SEMAPHORE_WORKFLOW_ID $DOCKER_USERNAME/llmp:$SEMAPHORE_WORKFLOW_ID
-            - docker tag llm:$SEMAPHORE_WORKFLOW_ID $DOCKER_USERNAME/llmp:latest
+            - docker tag llmp:$SEMAPHORE_WORKFLOW_ID $DOCKER_USERNAME/llmp:$SEMAPHORE_WORKFLOW_ID
+            - docker tag llmp:$SEMAPHORE_WORKFLOW_ID $DOCKER_USERNAME/llmp:latest
             - docker push $DOCKER_USERNAME/llmp:$SEMAPHORE_WORKFLOW_ID
             - docker push $DOCKER_USERNAME/llmp:latest
