@@ -1,6 +1,6 @@
 
 # Use an official Python runtime as a parent image
-FROM pytorch/pytorch:2.0.0-cuda11.8-cudnn8-runtime
+FROM pytorch/pytorch:2.4.0-cuda11.8-cudnn9-runtime
 
 # Pre-set the timezone to avoid prompts
 ENV TZ=Etc/UTC
