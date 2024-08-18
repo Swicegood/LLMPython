@@ -34,7 +34,7 @@ class LLaVAModel:
             ]
             formatted_prompt = self.processor.apply_chat_template(conversation, add_generation_prompt=True)
             inputs = self.processor(formatted_prompt, image, return_tensors="pt").to("cuda:0")
-            output = self.model.generate(**inputs, max_new_tokens=500)
+            output = self.model.generate(**inputs, max_new_tokens=200)
             raw_response = self.processor.decode(output[0], skip_special_tokens=True)
             
             cleaned_response = self.clean_response(raw_response)
