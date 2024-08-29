@@ -1,4 +1,8 @@
 # app.py 
+import os
+
+# Print the PID at the very beginning
+print(f"PID:{os.getpid()}")
 
 from flask import Flask, request, jsonify
 from llava_module import LLaVAModel
