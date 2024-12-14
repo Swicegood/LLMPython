@@ -74,4 +74,4 @@ def chat_completions():
         return jsonify({"error": "Internal server error"}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=1234)
+    app.run(debug=False, host='0.0.0.0', port=1234)
