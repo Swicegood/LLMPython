@@ -11,7 +11,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 WORKDIR /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir flask transformers pillow requests bitsandbytes accelerate wheel
+RUN pip install --no-cache-dir flask==3.0.3 transformers==4.44.2 pillow requests bitsandbytes==0.43.0 accelerate==0.34.0 wheel
 
 # Make port 1234 available to the world outside this container
 EXPOSE 1234
